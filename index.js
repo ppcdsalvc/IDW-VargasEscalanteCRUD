@@ -1,4 +1,4 @@
 
-var index =require('./funciones.js').leer;
-var myleer = index();
+var index =require('./funciones.js').leerXposicion;
+var myleer = index(0);
 

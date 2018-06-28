@@ -15,5 +15,15 @@ function leer (){
     });  
 
 }
+function leerXposicion(posicion){
+    fs.readFile('alumnos.json', 'utf8', (err, data) => {
+        if (err)
+            throw err;
+        var arreglo = JSON.parse(data);
+        console.log(arreglo[posicion]);
+
+    }); 
+}
 
 module.exports.leer=leer;
+module.exports.leerXposicion=leerXposicion;
