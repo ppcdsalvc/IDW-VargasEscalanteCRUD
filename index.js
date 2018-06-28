@@ -1,4 +1,3 @@
 
-var index =require('./funciones.js').leerXposicion;
-var myleer = index(0);
-
+var index =require('./funciones').BuscarElemento;
+var myleer = index();

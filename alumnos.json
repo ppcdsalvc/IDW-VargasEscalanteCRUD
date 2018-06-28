@@ -1,38 +1,46 @@
 [
-
-	{
-		"nombre": "Israel Arjona Vizcainno",
-		"email": "iarjona@ittepic.edu.mx",
-		"genero": "masculino",
-		"calificacion": [{
-				"materia": "matematicas",
-				"calificacion": 100
-			},
-			{
-				"materia": "español",
-				"calificacion": 90
-			}
-		],
-		"promedio": 95,
-		"fecha_nac": "17/06/1986",
-		"activo": true
-	},
-
-	{
-		"nombre": "Arturo Escalante Licona",
-		"email": "iarjona@ittepic.edu.mx",
-		"genero": "masculino",
-		"calificacion": [{
-				"materia": "matematicas",
-				"calificacion": 100
-			},
-			{
-				"materia": "español",
-				"calificacion": 100
-			}
-		],
-		"promedio": 100,
-		"fecha_nac": "17/06/0006",
-		"activo": true
-	}
+    {
+        "nombre": "Israel Vizcaino Arjona",
+        "email": "aiArona@ittepic.edu.mx",
+        "genero": "masculino",
+        "materias": [
+            {
+                "nombre": "matematicas",
+                "calif": "100"
+            },
+            {
+                "nombre": "español",
+                "calif": "90"
+            }
+        ],
+        "promedio": "95",
+        "fecha_nac": "17/09/1986",
+        "activo": "true"
+    },
+    {
+        "nombre": "Arturo Escalante Licona",
+        "email": "aiArona@ittepic.edu.mx",
+        "genero": "masculino",
+        "materias": [
+            {
+                "nombre": "matematicas",
+                "calif": "100"
+            },
+            {
+                "nombre": "español",
+                "calif": "90"
+            },
+            {
+                "nombre": "matematicas",
+                "calif": "100"
+            },
+            {
+                "nombre": "español",
+                "calif": "100"
+            }
+        ],
+        "promedio": "100",
+        "fecha_nac": "01/09/1986",
+        "activo": "true"
+    }
 ]
