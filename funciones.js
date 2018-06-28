@@ -1,5 +1,4 @@
 var fs = require("fs");
-
 function leer (){
     
     al = Array();
@@ -8,33 +7,39 @@ function leer (){
             throw err;
         var al = JSON.parse(data);
         al.forEach(element => {
-            console.log(element);
+            console.log(elemenclet);
+
             
         });
-        /*for (var i = 0; i < linea.length; i++) {
-            var line = linea[i];
-            console.log(line);
-        }*/
-      
-    });
-   // return linea;
+
+    });  
 
 }
-
-
-function BuscarElemento(posicion){
+function leerXposicion(posicion){
     fs.readFile('alumnos.json', 'utf8', (err, data) => {
         if (err)
             throw err;
         var arreglo = JSON.parse(data);
-        arreglo= arreglo.splice({label:"email"},1);
-        console.log(arreglo);
+        
+        console.log(arreglo[posicion]);
 
     }); 
 }
+function eliminarxposicion(n){
 
-
-
-module.exports=leer;
-module.exports.BuscarElemento=BuscarElemento;
-//module.exports.FindTaskById=FindTaskById;
+        fs.readFile('alumnos.json', (err, data) => {
+          if (err) throw err;
+          alumnos = JSON.parse(data);
+          alumnos.splice(n,1);
+          console.log(alumnos);
+          fs.writeFile('alumnos.json','['+JSON.stringify(alumnos)+']',(err)=>{
+            if(err)
+            throw err;
+            console.log("guardado");
+        });
+        });
+      
+}
+module.exports.leer=leer;
+module.exports.leerXposicion=leerXposicion;
+module.exports.eliminarxposicion=eliminarxposicion;
