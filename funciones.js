@@ -44,15 +44,15 @@ function AgregaElemento(){
     fs.readFile('alumnos.json', 'utf8', (err, data) => {
         if (err)
             throw err;
-        var stringified = JSON.stringify(data);
-        var arreglo = JSON.parse(stringified);
-        arreglo.nombre=['Alex'];
-        fs.writeFileSync('alumnos.json', JSON.stringify(arreglo));
+        var arreglo = JSON.parse(data);
+        arreglo.push({nombre:"Alex Vargas"});
         console.log(arreglo);
+        
+       
     
     }); 
 }
 
 module.exports=leer;
-module.exports.BuscarElemento=BuscarElemento;
-//module.exports.AgregaElemento=AgregaElemento;
+//module.exports.BuscarElemento=BuscarElemento;
+module.exports.AgregaElemento=AgregaElemento;

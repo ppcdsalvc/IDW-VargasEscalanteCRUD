@@ -1,3 +1,3 @@
 
-var index =require('./funciones').BuscarElemento;
+var index =require('./funciones').AgregaElemento;
 var myleer = index();
