@@ -27,14 +27,10 @@ function BuscarElemento(posicion){
         if (err)
             throw err;
         var arreglo = JSON.parse(data);
-        //arreglo= arreglo.splice({label:"Arturo@ittepic.edu.mx"},1);
-       // console.log(arreglo);
-        var found = arreglo.find(function(element) {
-            return element.email="Arturo@ittepic.edu.mx";
-          });
-          
-          console.log(found);
-
+         var newArr = arreglo.filter(function(item){
+            return item.email === "Arturo@ittepic.edu.mx";
+        });
+        console.log("Filter results:",newArr);
     }); 
 }
 
@@ -54,5 +50,5 @@ function AgregaElemento(){
 }
 
 module.exports=leer;
-//module.exports.BuscarElemento=BuscarElemento;
-module.exports.AgregaElemento=AgregaElemento;
+module.exports.BuscarElemento=BuscarElemento;
+//module.exports.AgregaElemento=AgregaElemento;
