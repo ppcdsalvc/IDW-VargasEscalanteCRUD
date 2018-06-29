@@ -27,11 +27,17 @@ function BuscarElemento(posicion){
         if (err)
             throw err;
         var arreglo = JSON.parse(data);
-        arreglo= arreglo.splice({label:"aiArona@ittepic.edu.mx"},1);
-        console.log(arreglo);
+        //arreglo= arreglo.splice({label:"Arturo@ittepic.edu.mx"},1);
+       // console.log(arreglo);
+        var found = arreglo.find(function(element) {
+            return element.email="Arturo@ittepic.edu.mx";
+          });
+          
+          console.log(found);
 
     }); 
 }
+
 
 
 function AgregaElemento(){
